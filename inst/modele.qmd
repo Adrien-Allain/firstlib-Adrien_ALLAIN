@@ -1,0 +1,12 @@
+---
+title: "Rapport de la ville de {params$commune}"
+author: "Nom de l'Auteur"
+format: html
+
+params:
+  code_commune: "Valeur par défaut"
+  code_departement: "Valeur par défaut"
+---
+
+
+
