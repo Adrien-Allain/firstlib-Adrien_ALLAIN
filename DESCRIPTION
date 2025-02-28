@@ -1,17 +1,23 @@
 Package: firstlibAdrienALLAIN
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Un package R qui fournit des outils d'analyses des donnée sur des élus et communes.
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: 
+  person("Adrien", "ALLAIN",
+    email = adrienallain4@gmail.com,
+    role = c("aut", "cre"),
+    comment = c(affiliation = "IAE Nantes")
+Description: Ce package fournit des outils pour analyser les données sur des élus et communes ou départements. 
+  Il inclut des outils de visualisation et des statistiques descriptives.
+  Ce package a été développé dans le cadre d'un projet pour un cours de programmation sous R à l'IAE Nantes.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
 Depends: 
     R (>= 3.5)
+Imports: dplyr, lubridate, purrr, stats, ggplot2, quarto
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
