@@ -3,8 +3,8 @@ title: "Rapport de la ville"
 format: "html"
 author: "Adrien ALLAIN"
 params: 
-  code_commune: "44109"
-  code_departement: "44"
+  code_commune: null
+  code_departement: null
 ---
 
 ```{r echo = FALSE, eval = TRUE, include=FALSE}
