@@ -22,10 +22,10 @@
 #'
 generer_rapport <- function(commune, departement, output) {
 # chemin du fichier modèle Quarto dans inst/
-  chemin_modele <- system.file("modele.qmd", package = "firstlibAdrienALLAIN")
+  chemin_modele <- system.file("rapport.qmd", package = "firstlibAdrienALLAIN")
 
 if (chemin_modele == "") {
-  stop("Le fichier modèle modele.qmd est introuvable dans le package.")
+  stop("Le fichier modèle rapport.qmd est introuvable dans le package.")
 }
 
 # Générer le rapport avec les paramètres fournis
