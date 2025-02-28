@@ -1,12 +1,39 @@
 ---
-title: "Rapport de la ville de {params$commune}"
-author: "Nom de l'Auteur"
-format: html
-
-params:
-  code_commune: "Valeur par défaut"
-  code_departement: "Valeur par défaut"
+title: "rapport de la ville de {params$code_commune}"
+format: "html"
+author: "Adrien ALLAIN"
+params: 
+  code_commune: "44109"
+  code_departement: "44"
 ---
 
+```{r}
+library(remotes)
+library(firstlibAdrienALLAIN)
 
+data <- firstlibAdrienALLAIN::data
 
+# Paramètres
+code_commune <- params$code_commune
+code_departement <- params$code_departement
+
+# Commune
+df_commune <- data[
+  data$Code.de.la.commune == code_commune & 
+  data$Code.du.département == code_departement, ]
+
+if (nrow(df_commune) > 0) {
+  summary_commune(df_commune)
+  plot_commune(df_commune)
+}
+
+# Département
+df_departement <- data[
+  data$Code.du.département == code_departement, ]
+
+if (nrow(df_departement) > 0) {
+  summary_departement(df_departement)
+  plot_departement(df_departement)
+}
+
+```
