@@ -8,7 +8,7 @@
 #'
 #' Cette fonction utilise le package `dplyr` pour manipuler le dataframe et le package `ggplot2` pour la visualisation des données.
 #'
-#' @param df Un dataframe conforme au schéma validé par `validate_schema`.
+#' @param df Un dataframe conforme au schéma.
 #'
 #' @return Un barplot du nombre d'élus par CSP.
 #'
@@ -37,7 +37,6 @@
 #' @import ggplot2
 
 plot_code_professions <- function(df){
-  validate_schema(df)
 
 
   code_csp <- df |>

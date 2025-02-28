@@ -7,7 +7,7 @@
 trouver_l_elu_le_plus_age(df)
 }
 \arguments{
-\item{df}{Un dataframe conforme au schéma validé par `validate_schema`.}
+\item{df}{Un dataframe conforme au schéma.}
 }
 \value{
 Un dataframe contenant le nom, prénom, date de naissance et âge de l'élu le plus âgé.

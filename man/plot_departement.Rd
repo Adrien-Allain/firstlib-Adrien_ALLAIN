@@ -7,8 +7,7 @@
 plot_departement(df)
 }
 \arguments{
-\item{df}{Un dataframe d'un unique département et conforme au schéma validé
-par`validate_schema`}
+\item{df}{Un dataframe d'un unique département et conforme au schéma.}
 }
 \value{
 Un diagramme en barres des catégories socio-professionnelles pour la commune donnée.
@@ -22,8 +21,8 @@ Cette fonction utilise le package `dplyr` pour manipuler le dataframe et le pack
 }
 \examples{
 df_exemple <- data.frame(
-  Code.du.département = rep("", 4),
-  Libellé.du.département = rep("", 4),
+  Code.du.département = c("1","1","1","1"),
+  Libellé.du.département = c("A","A","A","A"),
   Code.de.la.collectivité.à.statut.particulier = rep("", 4),
   Libellé.de.la.collectivité.à.statut.particulier = rep("", 4),
   Code.de.la.commune = rep("", 4),

@@ -5,7 +5,7 @@
 #'
 #' Cette fonction utilise le package `dplyr` pour manipuler le dataframe et le package `ggplot2` pour la visualisation des données.
 #'
-#' @param df Un dataframe d'une unique commune et conforme au schéma validé par`validate_schema`
+#' @param df Un dataframe d'une unique commune et conforme au schéma.
 #'
 #' @return Un diagramme en barres des catégories socio-professionnelles pour la commune donnée.
 #'
@@ -15,8 +15,8 @@
 #'   Libellé.du.département = rep("", 4),
 #'   Code.de.la.collectivité.à.statut.particulier = rep("", 4),
 #'   Libellé.de.la.collectivité.à.statut.particulier = rep("", 4),
-#'   Code.de.la.commune = rep("", 4),
-#'   Libellé.de.la.commune = rep("", 4),
+#'   Code.de.la.commune = c("1","1","1","1"),
+#'   Libellé.de.la.commune = c("A","A","A","A"),
 #'   Nom.de.l.élu = rep("", 4),
 #'   Prénom.de.l.élu = rep("", 4),
 #'   Code.sexe = rep("", 4),
@@ -36,7 +36,6 @@
 #' @import ggplot2
 
 plot_commune <- function(df){
-  validate_schema(df)
 
   nom_commune <- unique(df$Libellé.de.la.commune)
   nom_departement <- unique(df$Libellé.du.département)

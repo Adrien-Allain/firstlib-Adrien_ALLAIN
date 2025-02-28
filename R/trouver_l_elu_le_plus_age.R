@@ -7,7 +7,7 @@
 #'
 #' Cette fonction utilise le package `dplyr` pour manipuler le dataframe.
 #'
-#' @param df Un dataframe conforme au schéma validé par `validate_schema`.
+#' @param df Un dataframe conforme au schéma.
 #'
 #' @return Un dataframe contenant le nom, prénom, date de naissance et âge de l'élu le plus âgé.
 #'
@@ -38,8 +38,6 @@
 
 
 trouver_l_elu_le_plus_age <- function(df){
-
-  validate_schema(df)
 
   resultats <- df |>
     mutate(Date.de.naissance = dmy(Date.de.naissance)) |>

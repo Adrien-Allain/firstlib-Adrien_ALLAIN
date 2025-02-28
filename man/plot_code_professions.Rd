@@ -7,7 +7,7 @@
 plot_code_professions(df)
 }
 \arguments{
-\item{df}{Un dataframe conforme au schéma validé par `validate_schema`.}
+\item{df}{Un dataframe conforme au schéma.}
 }
 \value{
 Un barplot du nombre d'élus par CSP.

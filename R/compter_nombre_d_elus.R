@@ -4,7 +4,7 @@
 #'
 #' Cette fonction utilise le package `dplyr` pour manipuler le dataframe.
 #'
-#' @param df Un df conforme au schéma validé par la fonction `validate_schema`
+#' @param df Un df conforme au schéma.
 #'
 #' @return Un entier représentant le nombre d'adjoints
 #'
@@ -34,7 +34,6 @@
 
 compter_nombre_d_elus <- function(df){
   #Création du schéma à respecter
-  validate_schema(df)
 
   df |>
     select(Nom.de.l.élu,Prénom.de.l.élu,Date.de.naissance) |> #parmis ces colonnes :

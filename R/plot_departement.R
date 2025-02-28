@@ -5,15 +5,14 @@
 #'
 #' Cette fonction utilise le package `dplyr` pour manipuler le dataframe et le package `ggplot2` pour la visualisation des données.
 #'
-#' @param df Un dataframe d'un unique département et conforme au schéma validé
-#' par`validate_schema`
+#' @param df Un dataframe d'un unique département et conforme au schéma.
 #'
 #' @return Un diagramme en barres des catégories socio-professionnelles pour la commune donnée.
 #'
 #' @examples
 #' df_exemple <- data.frame(
-#'   Code.du.département = rep("", 4),
-#'   Libellé.du.département = rep("", 4),
+#'   Code.du.département = c("1","1","1","1"),
+#'   Libellé.du.département = c("A","A","A","A"),
 #'   Code.de.la.collectivité.à.statut.particulier = rep("", 4),
 #'   Libellé.de.la.collectivité.à.statut.particulier = rep("", 4),
 #'   Code.de.la.commune = rep("", 4),
@@ -36,7 +35,7 @@
 #' @import ggplot2
 
 plot_departement <- function(df){
-  validate_schema(df)
+
 
   nombre_commune <- length(unique(df$Libellé.de.la.commune))
   nom_departement <- unique(df$Libellé.du.département)

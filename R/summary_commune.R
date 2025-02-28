@@ -4,7 +4,7 @@
 #' contenant des informations sur les élus. Elle affiche le nom de la commune, le nombre d'élus,
 #' la distribution des âges des élus et les détails de l'élu le plus âgé.
 #'
-#' @param x Un dataframe conforme au schéma validé par `validate_schema`.
+#' @param x Un dataframe conforme au schéma.
 #' La classe de l'objet df sera modifié en "commune" si nécessaire.
 #'
 #' @return La fonction affiche directement un résumé dans la console (utilisation de `cat`)
@@ -15,8 +15,8 @@
 #'   Libellé.du.département = rep("", 4),
 #'   Code.de.la.collectivité.à.statut.particulier = rep("", 4),
 #'   Libellé.de.la.collectivité.à.statut.particulier = rep("", 4),
-#'   Code.de.la.commune = rep("", 4),
-#'   Libellé.de.la.commune = rep("", 4),
+#'   Code.de.la.commune = c("1","1","1","1"),
+#'   Libellé.de.la.commune = c("A","A","A","A"),
 #'   Nom.de.l.élu = rep("", 4),
 #'   Prénom.de.l.élu = rep("", 4),
 #'   Code.sexe = rep("", 4),

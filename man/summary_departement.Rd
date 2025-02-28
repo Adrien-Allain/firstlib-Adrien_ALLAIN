@@ -7,7 +7,7 @@
 summary_departement(x)
 }
 \arguments{
-\item{x}{Un dataframe conforme au schéma validé par `validate_schema`.
+\item{x}{Un dataframe conforme au schéma.
 La classe de l'objet df sera modifié en "departement" si nécessaire.}
 }
 \value{
@@ -24,8 +24,8 @@ Cette fonction utilise le package `dplyr` et `lubridate` pour manipuler le dataf
 }
 \examples{
 df_exemple <- data.frame(
-  Code.du.département = rep("", 4),
-  Libellé.du.département = rep("", 4),
+  Code.du.département = c("1","1","1","1"),
+  Libellé.du.département = c("A","A","A","A"),
   Code.de.la.collectivité.à.statut.particulier = rep("", 4),
   Libellé.de.la.collectivité.à.statut.particulier = rep("", 4),
   Code.de.la.commune = rep("", 4),

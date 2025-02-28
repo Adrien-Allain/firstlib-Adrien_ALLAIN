@@ -7,15 +7,15 @@
 #'
 #' Cette fonction utilise le package `dplyr` et `lubridate` pour manipuler le dataframe.
 #'
-#' @param x Un dataframe conforme au schéma validé par `validate_schema`.
+#' @param x Un dataframe conforme au schéma.
 #' La classe de l'objet df sera modifié en "departement" si nécessaire.
 #'
 #' @return La fonction affiche directement un résumé dans la console (utilisation de `cat`)
 #'
 #' @examples
 #' df_exemple <- data.frame(
-#'   Code.du.département = rep("", 4),
-#'   Libellé.du.département = rep("", 4),
+#'   Code.du.département = c("1","1","1","1"),
+#'   Libellé.du.département = c("A","A","A","A"),
 #'   Code.de.la.collectivité.à.statut.particulier = rep("", 4),
 #'   Libellé.de.la.collectivité.à.statut.particulier = rep("", 4),
 #'   Code.de.la.commune = rep("", 4),
@@ -40,7 +40,6 @@
 
 summary_departement <- function(x){
 
-  validate_schema(x)
 
   if (!"departement" %in% class(x)) { #Si l'objet est pas de classe "departement"
     class(x) <- c("departement", class(x)) #Transforme la classe de l'objet

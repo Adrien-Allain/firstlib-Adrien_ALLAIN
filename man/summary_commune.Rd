@@ -7,7 +7,7 @@
 summary_commune(x)
 }
 \arguments{
-\item{x}{Un dataframe conforme au schéma validé par `validate_schema`.
+\item{x}{Un dataframe conforme au schéma.
 La classe de l'objet df sera modifié en "commune" si nécessaire.}
 }
 \value{
@@ -24,8 +24,8 @@ df_exemple <- data.frame(
   Libellé.du.département = rep("", 4),
   Code.de.la.collectivité.à.statut.particulier = rep("", 4),
   Libellé.de.la.collectivité.à.statut.particulier = rep("", 4),
-  Code.de.la.commune = rep("", 4),
-  Libellé.de.la.commune = rep("", 4),
+  Code.de.la.commune = c("1","1","1","1"),
+  Libellé.de.la.commune = c("A","A","A","A"),
   Nom.de.l.élu = rep("", 4),
   Prénom.de.l.élu = rep("", 4),
   Code.sexe = rep("", 4),

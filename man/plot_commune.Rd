@@ -7,7 +7,7 @@
 plot_commune(df)
 }
 \arguments{
-\item{df}{Un dataframe d'une unique commune et conforme au schéma validé par`validate_schema`}
+\item{df}{Un dataframe d'une unique commune et conforme au schéma.}
 }
 \value{
 Un diagramme en barres des catégories socio-professionnelles pour la commune donnée.
@@ -25,8 +25,8 @@ df_exemple <- data.frame(
   Libellé.du.département = rep("", 4),
   Code.de.la.collectivité.à.statut.particulier = rep("", 4),
   Libellé.de.la.collectivité.à.statut.particulier = rep("", 4),
-  Code.de.la.commune = rep("", 4),
-  Libellé.de.la.commune = rep("", 4),
+  Code.de.la.commune = c("1","1","1","1"),
+  Libellé.de.la.commune = c("A","A","A","A"),
   Nom.de.l.élu = rep("", 4),
   Prénom.de.l.élu = rep("", 4),
   Code.sexe = rep("", 4),

@@ -9,7 +9,7 @@
 #' Cette fonction utilise le package `stats` pour calculer les quantiles
 #'
 #'
-#' @param df Un dataframe conforme au schéma validé par `validate_schema`.
+#' @param df Un dataframe conforme au schéma.
 #'
 #' @return Un vecteur numérique contenant les quantiles (0%, 25%, 50%, 75%, 100%) de la distribution des âges.
 #'
@@ -37,7 +37,6 @@
 #' @importFrom stats quantile
 
 calcul_distribution_age <- function(df) {
-  validate_schema(df)
 
 
   df$Date.de.naissance <- as.Date(df$Date.de.naissance, format = "%d/%m/%Y")

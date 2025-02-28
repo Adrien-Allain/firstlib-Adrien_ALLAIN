@@ -7,7 +7,7 @@
 compter_nombre_d_elus(df)
 }
 \arguments{
-\item{df}{Un df conforme au schéma validé par la fonction `validate_schema`}
+\item{df}{Un df conforme au schéma.}
 }
 \value{
 Un entier représentant le nombre d'adjoints
