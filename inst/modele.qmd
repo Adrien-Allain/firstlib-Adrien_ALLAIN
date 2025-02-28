@@ -28,7 +28,7 @@ nom_ville <- data |>
 ```
 
 ```{r echo=FALSE}
-cat("# Rapport de la ville de", nom_ville, "\n")
+cat("Rapport de la ville de", nom_ville, "\n")
 ```
 
 
