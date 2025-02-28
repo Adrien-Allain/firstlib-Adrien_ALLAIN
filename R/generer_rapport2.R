@@ -1,3 +1,6 @@
+
+#' @export
+#'
 generer_rapport2 <- function(commune, departement, output) {
   quarto::quarto_render(
     input = file.path("Users","adrienallain","Desktop","Master","S2","R avancé","Projet","firstlibAdrienALLAIN",
