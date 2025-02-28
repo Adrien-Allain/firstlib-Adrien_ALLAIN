@@ -43,7 +43,6 @@ summary_departement <- function(x){
 
   if (!"departement" %in% class(x)) { #Si l'objet est pas de classe "departement"
     class(x) <- c("departement", class(x)) #Transforme la classe de l'objet
-    cat("La classe de l'objet a été modifiée en 'departement'.\n")
   }
 
   nom_departement <- unique(x$Libellé.du.département)

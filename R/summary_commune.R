@@ -38,7 +38,6 @@ summary_commune <- function(x){
   # Assignation de la classe 'commune' au dataframe si nécessaire
   if (!"commune" %in% class(x)) { #Si l'objet est pas de classe "commune"
     class(x) <- c("commune", class(x)) #Transforme la classe de l'objet
-    cat("La classe de l'objet a été modifiée en 'commune'.\n")
   }
 
   nom_commune <- unique(x$Libellé.de.la.commune)
