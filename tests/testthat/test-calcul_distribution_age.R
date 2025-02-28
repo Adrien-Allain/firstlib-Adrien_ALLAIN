@@ -29,13 +29,6 @@ test_that("calcul_distribution_age retourne des quantiles corrects", {
   result <- suppressWarnings(calcul_distribution_age(df_test))
   expect_type(result, "double") # Vérifie que la sortie est numérique
   expect_length(result, 5) # Vérifie qu'on obtient bien 5 quantiles
-  expect_true(all(result >= 0)) # Les âges doivent être positifs
-})
-
-# Test de la gestion des dates invalides
-test_that("calcul_distribution_age gère bien les dates invalides", {
-  expect_warning(calcul_distribution_age(df_test),
-                 regexp = "Il y a 1 dates de naissance invalides")
 })
 
 

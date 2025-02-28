@@ -6,7 +6,7 @@
 #' calcule l'âge des individus et retourne les quantiles de la distribution des âges.
 #' Avertissement si des dates de naissance invalides sont détectées.
 #'
-#' Cette fonction utilise le package `dplyr` et `lubridate` pour manipuler le dataframe ainsi que `stats` pour calculer les quantiles
+#' Cette fonction utilise le package `stats` pour calculer les quantiles
 #'
 #'
 #' @param df Un dataframe conforme au schéma validé par `validate_schema`.
@@ -33,26 +33,22 @@
 #'   Code.nationalité = rep("", 4)
 #' )
 #' calcul_distribution_age(df_exemple)
-
-#' @import dplyr
-#' @importFrom lubridate today dmy
+#'
 #' @importFrom stats quantile
 
-calcul_distribution_age <- function(df){
+calcul_distribution_age <- function(df) {
   validate_schema(df)
 
-  df <- df |>
-    mutate(
-      Date.de.naissance = dmy(Date.de.naissance),
-      Valid.Date = !is.na(Date.de.naissance),
-      Age = as.integer(interval(start = Date.de.naissance, end = today()) / years(1))
-    )
 
-  n_invalid <- sum(!df$Valid.Date, na.rm = TRUE)
-  if (n_invalid > 0) {
-    warning(sprintf("Il y a %d dates de naissance invalides", n_invalid))
-  }
+  df$Date.de.naissance <- as.Date(df$Date.de.naissance, format = "%d/%m/%Y")
 
-  quantiles <-quantile(df$Age, probs = c(0, 0.25, 0.5, 0.75, 1), na.rm = TRUE)
+  df$Valid.Date <- !is.na(df$Date.de.naissance)
 
+  current_date <- Sys.Date()
+  df$Age <- as.integer((current_date - df$Date.de.naissance) / 365.25)
+
+  # Calculer les quantiles
+  quantiles <- quantile(df$Age, probs = c(0, 0.25, 0.5, 0.75, 1), na.rm = TRUE)
+
+  return(quantiles)
 }

@@ -20,7 +20,7 @@ La fonction valide le schéma du dataframe, convertit les dates de naissance en 
 calcule l'âge des individus et retourne les quantiles de la distribution des âges.
 Avertissement si des dates de naissance invalides sont détectées.
 
-Cette fonction utilise le package `dplyr` et `lubridate` pour manipuler le dataframe ainsi que `stats` pour calculer les quantiles
+Cette fonction utilise le package `lubridate` pour manipuler les dates ainsi que `stats` pour calculer les quantiles
 }
 \examples{
 df_exemple <- data.frame(

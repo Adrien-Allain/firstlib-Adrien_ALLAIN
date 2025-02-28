@@ -4,9 +4,9 @@ Title: Un package R qui fournit des outils d'analyses des donnée sur des élus 
 Version: 0.1.0
 Authors@R: 
   person("Adrien", "ALLAIN",
-    email = adrienallain4@gmail.com,
+    email = "adrienallain4@gmail.com",
     role = c("aut", "cre"),
-    comment = c(affiliation = "IAE Nantes")
+    comment = c(affiliation = "IAE Nantes"))
 Description: Ce package fournit des outils pour analyser les données sur des élus et communes ou départements. 
   Il inclut des outils de visualisation et des statistiques descriptives.
   Ce package a été développé dans le cadre d'un projet pour un cours de programmation sous R à l'IAE Nantes.
@@ -17,7 +17,11 @@ LazyData: true
 RoxygenNote: 7.3.2
 Depends: 
     R (>= 3.5)
-Imports: dplyr, lubridate, purrr, stats, ggplot2, quarto
+Imports: dplyr,
+         lubridate, 
+         purrr, 
+         stats, 
+         ggplot2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

@@ -30,7 +30,7 @@ df_exemple <- data.frame(
   Code.de.la.commune = rep("", 4),
   Libellé.de.la.commune = rep("", 4),
   Nom.de.l.élu = c("Dupont", "Martin"),
-  Prénom.de.l.élu = ("Jean", "Sophie"),
+  Prénom.de.l.élu = c("Jean", "Sophie"),
   Code.sexe = rep("", 4),
   Date.de.naissance = c("01-01-1950", "15-06-1970"),
   Code.de.la.catégorie.socio.professionnelle = rep("", 4),
