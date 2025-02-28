@@ -1,5 +1,5 @@
 ---
-title: "rapport de la ville de {params$code_commune}"
+title: "Rapport de la ville"
 format: "html"
 author: "Adrien ALLAIN"
 params: 
@@ -7,12 +7,33 @@ params:
   code_departement: "44"
 ---
 
-```{r}
+```{r echo = FALSE, eval = TRUE, include=FALSE}
 library(remotes)
 library(firstlibAdrienALLAIN)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
 
 data <- firstlibAdrienALLAIN::data
+```
 
+
+```{r echo = FALSE, eval = TRUE}
+#Nom de la ville pour titre
+
+nom_ville <- data |> 
+  filter(Code.de.la.commune == params$code_commune, Code.du.département == params$code_departement) |> 
+  pull(Libellé.de.la.commune) |> 
+  unique()
+```
+
+```{r echo=FALSE}
+cat("# Rapport de la ville de", nom_ville, "\n")
+```
+
+
+
+```{r echo = FALSE, eval = TRUE}
 # Paramètres
 code_commune <- params$code_commune
 code_departement <- params$code_departement
