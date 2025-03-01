@@ -121,7 +121,7 @@ summary_departement(df_departement)
 
 ```
 
-# 2. Fonction `generer_rapport()`
+# 3. Fonction `generer_rapport()`
 
 La fonction `generer_rapport()` permet de générer un fichier au format `PDF` contenant les résultats obtenus avec les fonctions *`summary_commune()`* et *`summary_departement()`*.
 
