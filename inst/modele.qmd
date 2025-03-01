@@ -1,22 +1,26 @@
 ---
-title: "Rapport de la ville"
-format: "html"
+title: "Rapport de la ville et du département"
+format : "pdf"
 author: "Adrien ALLAIN"
 params: 
-  code_commune: ""
-  code_departement: ""
+  code_commune: 
+  code_departement: 
+executes:
+  echo: false
 ---
 
-```{r echo = FALSE, eval = TRUE, include=FALSE}
+```{r setup, include=FALSE}
+
 library(remotes)
+library(knitr)
 library(firstlibAdrienALLAIN)
 library(dplyr)
 library(ggplot2)
 library(lubridate)
 
 data <- firstlibAdrienALLAIN::data
-```
 
+```
 
 ```{r echo = FALSE, eval = TRUE}
 #Nom de la ville pour titre
@@ -29,11 +33,12 @@ nom_ville <- data |>
 
 ```{r echo=FALSE}
 cat("Rapport de la ville de", nom_ville, "\n")
+
 ```
 
 
 
-```{r echo = FALSE, eval = TRUE, fig.width=8, fig.height=6}
+```{r echo = FALSE, eval = TRUE}
 # Paramètres
 code_commune <- params$code_commune
 code_departement <- params$code_departement
@@ -45,7 +50,7 @@ df_commune <- data[
 
 if (nrow(df_commune) > 0) {
   summary_commune(df_commune)
- p_com <-  plot_commune(df_commune)
+  p_com <-  plot_commune(df_commune)
   print(p_com)
 }
 
@@ -55,8 +60,8 @@ df_departement <- data[
 
 if (nrow(df_departement) > 0) {
   summary_departement(df_departement)
- p_dep <-  plot_departement(df_departement)
- print(p_dep)
+  p_dep <-  plot_departement(df_departement)
+  print(p_dep)
 }
 
 ```

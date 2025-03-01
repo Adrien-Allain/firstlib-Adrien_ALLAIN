@@ -2,12 +2,12 @@
 % Please edit documentation in R/generer_rapport.R
 \name{generer_rapport}
 \alias{generer_rapport}
-\title{Générer un rapport Quarto pour une commune et un département}
+\title{Génère un rapport Quarto PDF pour une commune et un département}
 \usage{
 generer_rapport(code_commune, code_departement, output)
 }
 \arguments{
-\item{output}{Chemin de sortie du fichier HTML généré, sous forme de chaîne de caractères.}
+\item{output}{Le nom de sortie du fichier pdf généré, sous forme de chaîne de caractères.}
 
 \item{commune}{Un code de commune sous forme de chaîne de caractères (ex : "44109").}
 
@@ -17,15 +17,15 @@ generer_rapport(code_commune, code_departement, output)
 Aucun retour explicite. Un fichier html
 }
 \description{
-Cette fonction génère un rapport HTML se basant sur un modèle quarto stocké dans le dossier 'inst/' du package.
-Elle utilise les codes de la commune et du département donnée, et sauvegarde le rapport dans un dossier html.
+Cette fonction génère un rapport PDF se basant sur un modèle quarto stocké dans le dossier 'inst/' du package.
+Elle utilise les codes de la commune et du département donnée, et sauvegarde le rapport en .pdf à la racine.
 }
 \examples{
 \dontrun{
 generer_rapport(
   commune = "44109",
   departement = "44",
-  output = "rapport_nantes.html"
+  output = "rapport_nantes.pdf"
 )
 }
 

@@ -1,7 +1,7 @@
 ---
 title: "Rapport de la ville de Nantes"
 author: "Adrien ALLAIN"
-format: html
+format: "html"
 
 params:
   code_commune: 44109

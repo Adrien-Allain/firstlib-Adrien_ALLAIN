@@ -60,5 +60,6 @@ plot_departement <- function(df){
     labs(title = paste(nom_departement, "-",nombre_commune, "communes"), x = paste("Libellés des 10 codes professionnels les plus représentés
 pour le département", nom_departement), y = "Nombre d'élus")+
     theme_classic()
+
   return(p)
 }

@@ -1,11 +1,11 @@
-#' @title Générer un rapport Quarto pour une commune et un département
+#' @title Génère un rapport Quarto PDF pour une commune et un département
 #'
-#' @description Cette fonction génère un rapport HTML se basant sur un modèle quarto stocké dans le dossier 'inst/' du package.
-#' Elle utilise les codes de la commune et du département donnée, et sauvegarde le rapport dans un dossier html.
+#' @description Cette fonction génère un rapport PDF se basant sur un modèle quarto stocké dans le dossier 'inst/' du package.
+#' Elle utilise les codes de la commune et du département donnée, et sauvegarde le rapport en .pdf à la racine.
 #'
 #' @param commune Un code de commune sous forme de chaîne de caractères (ex : "44109").
 #' @param departement Un code de département sous forme de chaîne de caractères (ex : "44").
-#' @param output Chemin de sortie du fichier HTML généré, sous forme de chaîne de caractères.
+#' @param output Le nom de sortie du fichier pdf généré, sous forme de chaîne de caractères.
 #'
 #' @return Aucun retour explicite. Un fichier html
 #'
@@ -14,7 +14,7 @@
 #' generer_rapport(
 #'   commune = "44109",
 #'   departement = "44",
-#'   output = "rapport_nantes.html"
+#'   output = "rapport_nantes.pdf"
 #' )
 #' }
 #'
@@ -28,17 +28,21 @@ generer_rapport <- function(code_commune, code_departement, output) {
   chemin_modele <- system.file("modele.qmd", package = "firstlibAdrienALLAIN")
 
 if (chemin_modele == "") {
-  stop("Le fichier modèle.qmd est introuvable dans le package.")
+  stop("Le fichier modele.qmd est introuvable dans le package.")
 }
+
+  output_dir <- tempdir()
 
 # Générer le rapport avec les paramètres fournis
 quarto::quarto_render(
   input = chemin_modele,
   output_file = output,
-  execute_params = list(code_commune = code_commune, code_departement = code_departement)
+  execute_params = list(code_commune = code_commune, code_departement = code_departement),
 )
+file.copy(from = file.path(output_dir, output), to = output, overwrite = TRUE)
 
-message("Rapport généré avec succès : ", output)
+
+message("Rapport pdf généré avec succès : ", output)
 
 }
 
