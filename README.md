@@ -11,6 +11,8 @@ output:
 <!-- badges: start -->
 <!-- badges: end -->
 
+# Bienvenue
+
 Bienvenue sur la documentation de **firstlibAdrienALLAIN**, un package sous R pour l'analyse de données des élus municipaux.
 
 
