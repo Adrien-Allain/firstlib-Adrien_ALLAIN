@@ -3,12 +3,12 @@ title: "firstlibAdrienALLAIN"
 output:
   html_document:
     code_folding: show
-    highlight: espresso
+    highlight: 
 ---
-<p style="display: flex; align-items: center; margin-left: 20px; margin-top: 20px;">
-  <img src="man/figures/logo.png" alt="Logo" width="100">
-</p>
 
+<p style="display: flex; align-items: center; margin-left: 20px; margin-top: 20px;">
+  <img src="https://github.com/Adrien-Allain/firstlib-Adrien_ALLAIN/blob/main/man/figures/logo.png" alt="Logo" width="100">
+</p>
 
 <!-- badges: start -->
 <!-- badges: end -->
