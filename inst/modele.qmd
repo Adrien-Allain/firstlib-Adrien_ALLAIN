@@ -1,6 +1,6 @@
 ---
 title: "Rapport de la ville et du département"
-format : "pdf"
+format : "html"
 author: "Adrien ALLAIN"
 params: 
   code_commune: 
