@@ -7,7 +7,7 @@ output:
 ---
 
 <p style="display: flex; align-items: center; margin-left: 20px; margin-top: 20px;">
-  <img src="https://github.com/Adrien-Allain/firstlib-Adrien_ALLAIN/blob/main/man/figures/logo.png" alt="Logo" width="100">
+  <img src=logo.png" alt="Logo" width="100">
 </p>
 
 <!-- badges: start -->
