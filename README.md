@@ -3,28 +3,28 @@ title: "firstlibAdrienALLAIN"
 output:
   html_document:
     code_folding: show
-    highlight: morph
+    highlight: espresso
 ---
 
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-# Bienvenue
+# Aperçu
 
-Bienvenue sur la documentation de **firstlibAdrienALLAIN**, un package sous R pour l'analyse de données des élus municipaux.
+**firstlibAdrienALLAIN** est un package sous R pour l'analyse de données des élus municipaux.
 
 
 ## Fonctionnalités 
 
-<div class="bubble">Analyse des élus</div> 
-<div class="bubble">Résumés des communes et départements</div> 
-<div class="bubble">Génération de rapports pdf automatisés</div>
+- `Analyse des élus`
+- `Résumés des communes et départements`
+- `Génération de rapports pdf automatisés`
 
 
 ## Installation
 
-Pour installer le package, utilisez la commande suivante dans R :
+Vous pouvez installer la version de développement du package directement depuis GitHub en utilisant cette commande : 
 ``` r
 remotes::install_github("Adrien-Allain/firstlibAdrienALLAIN")
 ```
@@ -47,6 +47,11 @@ summary_departement(data)
 **`generer_rapport()`** : Pour générer des rapports au format **PDF** avec des analyses sur les communes et départements.
 
 
+## Obtenir de l'aide 
 
+Si vous rencontrez des difficultés à utiliser certaines fonctions ou si vous voulez signaler un bug, vous pouvez me contacter à cette email : adrienallain4@gmail.com
 
+## Contribuer 
+
+Pour contribuer au développement de ce package, cela se passe sur GitHub ! (https://github.com/Adrien-Allain/firstlib-Adrien_ALLAIN)
 
