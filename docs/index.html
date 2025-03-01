@@ -18,7 +18,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="index.html">firstlibAdrienALLAIN</a>
 
@@ -46,29 +46,28 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9"><p>Bienvenue sur la documentation de <strong>firstlibAdrienALLAIN</strong>, un package sous R pour l’analyse de données des élus municipaux.</p>
+  <main id="main" class="col-md-9"><div class="section level1">
+<div class="page-header"><h1 id="aperçu">Aperçu<a class="anchor" aria-label="anchor" href="#aper%C3%A7u"></a>
+</h1></div>
+<p><strong>firstlibAdrienALLAIN</strong> est un package sous R pour l’analyse de données des élus municipaux.</p>
 <div class="section level2">
 <h2 id="fonctionnalités">Fonctionnalités<a class="anchor" aria-label="anchor" href="#fonctionnalit%C3%A9s"></a>
 </h2>
-<div class="bubble">
-Analyse des élus
-</div>
-<div class="bubble">
-Résumés des communes et départements
-</div>
-<div class="bubble">
-Génération de rapports pdf automatisés
-</div>
+<ul>
+<li><code>Analyse des élus</code></li>
+<li><code>Résumés des communes et départements</code></li>
+<li><code>Génération de rapports pdf automatisés</code></li>
+</ul>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>Pour installer le package, utilisez la commande suivante dans R :</p>
+<p>Vous pouvez installer la version de développement du package directement depuis GitHub en utilisant cette commande :</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Adrien-Allain/firstlibAdrienALLAIN"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+<h2 id="exemple-dutilisation">Exemple d’utilisation<a class="anchor" aria-label="anchor" href="#exemple-dutilisation"></a>
 </h2>
 <p>Voici un exemple pour illustrer comment utiliser le package dans R :</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
@@ -76,7 +75,24 @@ Génération de rapports pdf automatisés
 <span></span>
 <span><span class="fu"><a href="reference/summary_departement.html">summary_departement</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code></pre></div>
 </div>
-
+<div class="section level2">
+<h2 id="fonctionnalités-principales">Fonctionnalités principales<a class="anchor" aria-label="anchor" href="#fonctionnalit%C3%A9s-principales"></a>
+</h2>
+<p><strong><code><a href="reference/summary_commune.html">summary_commune()</a></code></strong> : Un résumé des informations concernant une commune comme le nombre d’élus, distribution des âges des élus ou des informations sur l’élu le plus âgé.</p>
+<p><strong><code><a href="reference/summary_departement.html">summary_departement()</a></code></strong> : Un résumé des informations relatives à un département comme le nombre de commune, le nombre d’élus ainsi que des informations concernant l’élu le plus âgé et le plus jeune et des statistiques sur la commune ayant la moyenne d’âge la plus élevée et la plus faible.</p>
+<p><strong><code><a href="reference/generer_rapport.html">generer_rapport()</a></code></strong> : Pour générer des rapports au format <strong>PDF</strong> avec des analyses sur les communes et départements.</p>
+</div>
+<div class="section level2">
+<h2 id="obtenir-de-laide">Obtenir de l’aide<a class="anchor" aria-label="anchor" href="#obtenir-de-laide"></a>
+</h2>
+<p>Si vous rencontrez des difficultés à utiliser certaines fonctions ou si vous voulez signaler un bug, vous pouvez me contacter à cette email : <a href="mailto:adrienallain4@gmail.com" class="email">adrienallain4@gmail.com</a></p>
+</div>
+<div class="section level2">
+<h2 id="contribuer">Contribuer<a class="anchor" aria-label="anchor" href="#contribuer"></a>
+</h2>
+<p>Pour contribuer au développement de ce package, cela se passe sur GitHub ! (<a href="https://github.com/Adrien-Allain/firstlib-Adrien_ALLAIN" class="external-link uri">https://github.com/Adrien-Allain/firstlib-Adrien_ALLAIN</a>)</p>
+</div>
+</div>
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
