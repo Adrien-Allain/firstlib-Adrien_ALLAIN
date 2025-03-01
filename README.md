@@ -2,14 +2,15 @@
 title: "firstlibAdrienALLAIN"
 output:
   html_document:
-    css: "style.css"
     code_folding: show
-    highlight: tango
+    highlight: morph
 ---
 
 
 <!-- badges: start -->
 <!-- badges: end -->
+
+# Bienvenue
 
 Bienvenue sur la documentation de **firstlibAdrienALLAIN**, un package sous R pour l'analyse de données des élus municipaux.
 
