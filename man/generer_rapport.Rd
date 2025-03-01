@@ -2,7 +2,7 @@
 % Please edit documentation in R/generer_rapport.R
 \name{generer_rapport}
 \alias{generer_rapport}
-\title{Génère un rapport Quarto PDF pour une commune et un département}
+\title{Générer rapport}
 \usage{
 generer_rapport(code_commune, code_departement, output)
 }

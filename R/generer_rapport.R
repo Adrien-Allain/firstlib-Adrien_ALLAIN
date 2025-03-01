@@ -1,4 +1,4 @@
-#' @title Génère un rapport Quarto PDF pour une commune et un département
+#' @title Générer rapport
 #'
 #' @description Cette fonction génère un rapport PDF se basant sur un modèle quarto stocké dans le dossier 'inst/' du package.
 #' Elle utilise les codes de la commune et du département donnée, et sauvegarde le rapport en .pdf à la racine.
