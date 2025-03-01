@@ -20,9 +20,9 @@ output:
 
 ## Fonctionnalités 
 
-- `Analyse des élus`
-- `Résumés des communes et départements`
-- `Génération de rapports pdf automatisés`
+- `Faire des analyses des élus`
+- `Obtenir des résumés détaillés des communes et départements`
+- `Générer des rapports pdf automatisés`
 
 
 ## Installation
