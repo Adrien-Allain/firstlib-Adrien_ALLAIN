@@ -5,14 +5,14 @@ output:
     code_folding: show
     highlight: espresso
 ---
-
+![Logo](docs/logo.png)
 
 <!-- badges: start -->
 <!-- badges: end -->
 
 # Aperçu
 
-**firstlibAdrienALLAIN** est un package sous R pour l'analyse de données des élus municipaux.
+**firstlibAdrienALLAIN** est un package R dédié à l’analyse des données des élus municipaux.
 
 
 ## Fonctionnalités 
