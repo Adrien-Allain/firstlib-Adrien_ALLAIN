@@ -46,29 +46,37 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="firstlibadrienallain">firstlibAdrienALLAIN<a class="anchor" aria-label="anchor" href="#firstlibadrienallain"></a>
-</h1></div>
-<!-- badges: start -->
-<!-- badges: end -->
-<p>The goal of firstlibAdrienALLAIN is to …</p>
+  <main id="main" class="col-md-9"><p>Bienvenue sur la documentation de <strong>firstlibAdrienALLAIN</strong>, un package sous R pour l’analyse de données des élus municipaux.</p>
+<div class="section level2">
+<h2 id="fonctionnalités">Fonctionnalités<a class="anchor" aria-label="anchor" href="#fonctionnalit%C3%A9s"></a>
+</h2>
+<div class="bubble">
+Analyse des élus
+</div>
+<div class="bubble">
+Résumés des communes et départements
+</div>
+<div class="bubble">
+Génération de rapports pdf automatisés
+</div>
+</div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of firstlibAdrienALLAIN from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>Pour installer le package, utilisez la commande suivante dans R :</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"Adrien-Allain/firstlib-Adrien_ALLAIN"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Adrien-Allain/firstlibAdrienALLAIN"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
+<p>Voici un exemple pour illustrer comment utiliser le package dans R :</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://adrien-allain.github.io/firstlib-Adrien_ALLAIN/">firstlibAdrienALLAIN</a></span><span class="op">)</span></span>
-<span><span class="co">## basic example code</span></span></code></pre></div>
+<span></span>
+<span><span class="fu"><a href="reference/summary_departement.html">summary_departement</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code></pre></div>
 </div>
-</div>
+
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
