@@ -68,13 +68,20 @@ Génération de rapports pdf automatisés
 <code class="sourceCode R"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"Adrien-Allain/firstlibAdrienALLAIN"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+<h2 id="exemple-dutilisation">Exemple d’utilisation<a class="anchor" aria-label="anchor" href="#exemple-dutilisation"></a>
 </h2>
 <p>Voici un exemple pour illustrer comment utiliser le package dans R :</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://adrien-allain.github.io/firstlib-Adrien_ALLAIN/">firstlibAdrienALLAIN</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="reference/summary_departement.html">summary_departement</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="fonctionnalités-principales">Fonctionnalités principales<a class="anchor" aria-label="anchor" href="#fonctionnalit%C3%A9s-principales"></a>
+</h2>
+<p><strong><code><a href="reference/summary_commune.html">summary_commune()</a></code></strong> : Un résumé des informations concernant une commune comme le nombre d’élus, distribution des âges des élus ou des informations sur l’élu le plus âgé.</p>
+<p><strong><code><a href="reference/summary_departement.html">summary_departement()</a></code></strong> : Un résumé des informations relatives à un département comme le nombre de commune, le nombre d’élus ainsi que des informations concernant l’élu le plus âgé et le plus jeune et des statistiques sur la commune ayant la moyenne d’âge la plus élevée et la plus faible.</p>
+<p><strong><code><a href="reference/generer_rapport.html">generer_rapport()</a></code></strong> : Pour générer des rapports au format <strong>PDF</strong> avec des analyses sur les communes et départements.</p>
 </div>
 
   </main><aside class="col-md-3"><div class="license">
