@@ -1,8 +1,3 @@
-template:
-  bootstrap: 5
-  bootswatch: cosmo
-
-
 pandoc: 3.1.1
 pkgdown: 2.1.1
 pkgdown_sha: ~
