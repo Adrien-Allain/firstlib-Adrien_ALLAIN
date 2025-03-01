@@ -14,7 +14,7 @@ generer_rapport(code_commune, code_departement, output)
 \item{departement}{Un code de département sous forme de chaîne de caractères (ex : "44").}
 }
 \value{
-Aucun retour explicite. Un fichier html
+Aucun retour explicite. Un fichier PDF
 }
 \description{
 Cette fonction génère un rapport PDF se basant sur un modèle quarto stocké dans le dossier 'inst/' du package.

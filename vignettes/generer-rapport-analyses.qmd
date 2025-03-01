@@ -1,0 +1,140 @@
+---
+title: "Générer un rapport d'analyses"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette's Title}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+format: html
+---
+
+```{r setup, include=FALSE}
+library(firstlibAdrienALLAIN)
+library(dplyr)
+library(lubridate)
+```
+
+## Introduction :
+
+Cette vignette a pour objectif de décrire l'utilisation de différentes fonctions permettant l'analyse et la génération de rapports à partir de données relatives aux élus municipaux.
+
+Les fonctions expliquées sont les suivantes : 
+
+**`summary_commune()`** : Cette fonction génère un résumé des informations concernant une commune spécifique. Elle permet d'obtenir des statistiques sur les élus de la commune, comme le nombre d'élus, la distribution des âges et des informations sur l'élu le plus âgé.
+
+
+**`summary_departement()`** : Comme la fonction *`summary_commune()`*, cette fonction génère un résumé des informations relatives à un département spécifique. Elle permet de connaitre le nombre de communes dans le département, le nombre d'élus et la distribution des âges. La fonction affiche aussi les informations concernant l'élu le plus âgé et le plus jeune ainsi que des statistiques concernant la commune ayant la moyenne d'âge la plus élevée et la plus faible.
+
+**`generer_rapport()`** : Cette fonction rend possible la génération d'un rapport quarto au format PDF contenant les résultats obtenus avec les fonctions *`summary_commune()`* et *`summary_departement()`*.
+
+# 1. Fonction `summary_commune()`
+
+La fonction `summary_commune()` prend en entrer un `dataframe` auquel le type `commune` est appliqué si ce n'est pas le cas, et fournit un résumé de la commune incluant : 
+
+- Le nom de la commune 
+- Le nombre d'élus 
+- La distribution des âges
+- Des informations sur l'élu le plus âgé
+
+## Exemple d'utilisation de `summary_commune()`
+
+### Création d'un dataframe d'exemple
+```{r}
+
+df_commune <- data.frame(
+  Code.du.département = rep("44", 10),
+  Libellé.du.département = rep("Loire-Atlantique", 10),
+  Code.de.la.collectivité.à.statut.particulier = rep(0, 10),
+  Libellé.de.la.collectivité.à.statut.particulier = rep("A", 10),
+  Code.de.la.commune = rep("44000", 10),
+  Libellé.de.la.commune = rep("Nantes", 10),
+  Nom.de.l.élu = c("MR.A", "MR.B", "MR.C", "MR.D","MR.E","MR.F","MR.G","MR.H","MR.I","MR.J"),
+  Prénom.de.l.élu = c("PrenomA","PrenomB","PrenomC","PrenomD","PrenomE","PrenomF","PrenomG","PrenomH","PrenomI","PrenomJ"),
+  Code.sexe = rep("H", 10),
+  Date.de.naissance = as.Date(c("23/6/1977", "6/3/1982", "15/3/1983", "14/8/1995", "2/11/1970", 
+                                "26/1/1986", "28/7/1977", "9/7/1979", "15/11/1987", "3/11/1983"), format = "%d/%m/%Y"),
+  Code.de.la.catégorie.socio.professionnelle = c(2310, 321, 372, 2330, 321, 3110, 3530, 4120, 456, 4120),
+  Libellé.de.la.catégorie.socio.professionnelle = c("A", "B","C", "D", "E", "F", "G", "H", "I", "J"),
+  Date.de.début.du.mandat = as.Date(c("2/8/2020", "17/11/2021", "13/8/2020", "27/5/2022", "24/1/2022",
+                                      "4/3/2022", "9/8/2022", "20/6/2022", "29/6/2022", "10/6/2022"), format = "%d/%m/%Y"),
+  Libellé.de.la.fonction = c("", "Maire", "1er adjoint au Maire", "Maire", "1er adjoint au Maire", 
+                             "", "2e adjoint au Maire", "3e adjoint au Maire", "", ""), # Ajout d'une valeur manquante
+  Date.de.début.de.la.fonction = as.Date(c("2/8/2020", "17/11/2021", "13/8/2020", "27/5/2022", "24/1/2022",
+                                           "4/3/2022", "9/8/2022", "20/6/2022", "29/6/2022", "10/6/2022"), format = "%d/%m/%Y"),
+  Code.nationalité = rep("FR", 10)
+)
+
+
+```
+### Résumé de la commune
+```{r}
+
+summary_commune(df_commune)
+
+```
+
+# 2. Fonction `summary_departement()`
+
+La fonction `summary_departement()` prend en entrer un `dataframe` auquel le type `departement` est appliqué si ce n'est pas le cas, et fournit un résumé du département incluant : 
+
+- Le nombre de commune dans le département
+- Le nombre d'élus 
+- La distribution des âges
+- Des informations sur l'élu le plus âgé 
+- Des informations sur l'élu le plus jeune
+- Des statistiques sur la commune ayant la moyenne d'âge la plus élevée 
+- Des statistiques sur la commune ayant la moyenne d'âge la plus faible
+
+## Exemple d'utilisation de `summary_departement()`
+
+### Création d'un dataframe d'exemple
+
+```{r}
+df_departement <- data.frame(
+  Code.du.département = rep("44", 10),
+  Libellé.du.département = rep("Loire-Atlantique", 10),
+  Code.de.la.collectivité.à.statut.particulier = rep(0, 10),
+  Libellé.de.la.collectivité.à.statut.particulier = rep("A", 10),
+  Code.de.la.commune = c(rep(44000, 3), rep(44100, 2), rep(44200, 3), rep(44300,2)),
+  Libellé.de.la.commune = c(rep("Commune1", 3), rep("Commune2", 2), rep("Commune3",3),rep("Commune4",2)),
+  Nom.de.l.élu = c("MR.A", "MR.B", "MR.C", "MR.D","MR.E","MR.F","MR.G","MR.H","MR.I","MR.J"),
+  Prénom.de.l.élu = c("PrenomA","PrenomB","PrenomC","PrenomD","PrenomE","PrenomF","PrenomG","PrenomH","PrenomI","PrenomJ"),
+  Code.sexe = rep("H", 10),
+  Date.de.naissance = as.Date(c("23/6/1977", "6/3/1982", "15/3/1983", "14/8/1995", "2/11/1970", 
+                                "26/1/1986", "28/7/1977", "9/7/1979", "15/11/1987", "3/11/1983"), format = "%d/%m/%Y"),
+  Code.de.la.catégorie.socio.professionnelle = c(2310, 321, 372, 2330, 321, 3110, 3530, 4120, 456, 4120),
+  Libellé.de.la.catégorie.socio.professionnelle = c("A", "B","C", "D", "E", "F", "G", "H", "I", "J"),
+  Date.de.début.du.mandat = as.Date(c("2/8/2020", "17/11/2021", "13/8/2020", "27/5/2022", "24/1/2022",
+                                      "4/3/2022", "9/8/2022", "20/6/2022", "29/6/2022", "10/6/2022"), format = "%d/%m/%Y"),
+  Libellé.de.la.fonction = c("", "Maire", "1er adjoint au Maire", "Maire", "1er adjoint au Maire", 
+                             "", "2e adjoint au Maire", "3e adjoint au Maire", "", ""), # Ajout d'une valeur manquante
+  Date.de.début.de.la.fonction = as.Date(c("2/8/2020", "17/11/2021", "13/8/2020", "27/5/2022", "24/1/2022",
+                                           "4/3/2022", "9/8/2022", "20/6/2022", "29/6/2022", "10/6/2022"), format = "%d/%m/%Y"),
+  Code.nationalité = rep("FR", 10)
+)
+
+```
+### Résumé du département
+```{r}
+
+summary_departement(df_departement)
+
+```
+
+# 2. Fonction `generer_rapport()`
+
+La fonction `generer_rapport()` permet de générer un fichier au format `PDF` contenant les résultats obtenus avec les fonctions *`summary_commune()`* et *`summary_departement()`*.
+
+## Exemple d'utilisation de `generer_rapport`
+
+Création d'un rapport pour la ville de Nantes (code = 44109) et du département de la Loire-Atlantique (code = 44)
+
+```{r eval=FALSE}
+
+generer_rapport(code_commune = "44109", code_departement = "44", output = "Rapport_Nantes.pdf")
+
+
+```
+
+
+

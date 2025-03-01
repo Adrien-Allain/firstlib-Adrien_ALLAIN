@@ -7,7 +7,7 @@
 #' @param departement Un code de département sous forme de chaîne de caractères (ex : "44").
 #' @param output Le nom de sortie du fichier pdf généré, sous forme de chaîne de caractères.
 #'
-#' @return Aucun retour explicite. Un fichier html
+#' @return Aucun retour explicite. Un fichier PDF
 #'
 #' @examples
 #' \dontrun{
@@ -31,7 +31,6 @@ if (chemin_modele == "") {
   stop("Le fichier modele.qmd est introuvable dans le package.")
 }
 
-  output_dir <- tempdir()
 
 # Générer le rapport avec les paramètres fournis
 quarto::quarto_render(
@@ -39,7 +38,6 @@ quarto::quarto_render(
   output_file = output,
   execute_params = list(code_commune = code_commune, code_departement = code_departement),
 )
-file.copy(from = file.path(output_dir, output), to = output, overwrite = TRUE)
 
 
 message("Rapport pdf généré avec succès : ", output)

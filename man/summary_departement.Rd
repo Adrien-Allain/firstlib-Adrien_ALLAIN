@@ -20,7 +20,7 @@ affiche aussi les informations de l'élu le plus âgée et le plus jeune du dép
 avec la moyenne d'âge la plus faible et la plus élevée.
 }
 \details{
-Cette fonction utilise le package `dplyr` et `lubridate` pour manipuler le dataframe.
+Cette fonction utilise le package `dplyr` pour manipuler le dataframe.
 }
 \examples{
 df_exemple <- data.frame(

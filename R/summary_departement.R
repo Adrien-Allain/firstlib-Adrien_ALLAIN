@@ -5,7 +5,7 @@
 #' affiche aussi les informations de l'élu le plus âgée et le plus jeune du département ainsi que les statistiques de la commune
 #' avec la moyenne d'âge la plus faible et la plus élevée.
 #'
-#' Cette fonction utilise le package `dplyr` et `lubridate` pour manipuler le dataframe.
+#' Cette fonction utilise le package `dplyr` pour manipuler le dataframe.
 #'
 #' @param x Un dataframe conforme au schéma.
 #' La classe de l'objet df sera modifié en "departement" si nécessaire.
@@ -36,7 +36,7 @@
 #' @export
 #'
 #' @import dplyr
-#' @import lubridate
+#'
 
 summary_departement <- function(x){
 
@@ -64,13 +64,11 @@ summary_departement <- function(x){
     validate_schema(df)
 
     resultats <- df |>
-      mutate(Date.de.naissance = dmy(Date.de.naissance)) |>
-
+      mutate(Date.de.naissance = as.Date(Date.de.naissance, format = "%d/%m/%Y")) |>
       slice(which.max(Date.de.naissance)) |>
+      mutate(Âge = as.integer(difftime(Sys.Date(), Date.de.naissance, units = "days") / 365.25))
 
-      mutate(Âge = as.integer(interval(Date.de.naissance, Sys.Date()) / years(1)))
-
-
+    return(resultats)
   }
 
 
@@ -79,9 +77,8 @@ summary_departement <- function(x){
   # Analyse des communes par moyenne d'âge
   communes_stats <- x |>
     mutate(
-      Date.de.naissance = dmy(Date.de.naissance),
-      Age = as.integer(interval(start = Date.de.naissance, end = today()) / years(1))
-    ) |>
+      Date.de.naissance = as.Date(Date.de.naissance, format = "%d/%m/%Y"),
+      Age = as.integer(difftime(Sys.Date(), Date.de.naissance, units = "days") / 365.25)) |>
     group_by(Libellé.de.la.commune) |>
     summarise(
       age_moyen = mean(Age, na.rm = TRUE),

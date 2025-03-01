@@ -54,7 +54,7 @@ summary_commune <- function(x){
   cat("\nL'élu.e le/la plus agé.e de la commune:\n")
   cat("- Nom :", elu_plus_age$Nom.de.l.élu, "\n")
   cat("- Prénom :", elu_plus_age$Prénom.de.l.élu, "\n")
-  cat("- Âge :", elu_plus_age$Âge, "\n")
+  cat("- Âge :", elu_plus_age$Âge, "ans")
 
 
 }
