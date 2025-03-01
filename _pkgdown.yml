@@ -3,6 +3,9 @@ template:
   bootstrap: 5
   bootswatch: cosmo
 
+assets:
+- "style.css"
+
 navbar:
   structure:
     left:  [intro, reference, articles, tutorials, news]
