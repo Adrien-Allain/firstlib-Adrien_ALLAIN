@@ -2,9 +2,8 @@
 title: "firstlibAdrienALLAIN"
 output:
   html_document:
-    css: "style.css"
     code_folding: show
-    highlight: tango
+    highlight: morph
 ---
 
 
