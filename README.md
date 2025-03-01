@@ -1,26 +1,39 @@
+---
+title: "firstlibAdrienALLAIN"
+output:
+  html_document:
+    css: "style.css"
+    code_folding: show
+    highlight: tango
+---
 
-# firstlibAdrienALLAIN
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of firstlibAdrienALLAIN is to ...
+Bienvenue sur la documentation de **firstlibAdrienALLAIN**, un package sous R pour l'analyse de données des élus municipaux.
+
+
+## Fonctionnalités 
+
+<div class="bubble">Analyse des élus</div> 
+<div class="bubble">Résumés des communes et départements</div> 
+<div class="bubble">Génération de rapports pdf automatisés</div>
+
 
 ## Installation
 
-You can install the development version of firstlibAdrienALLAIN from [GitHub](https://github.com/) with:
-
+Pour installer le package, utilisez la commande suivante dans R :
 ``` r
-# install.packages("pak")
-pak::pak("Adrien-Allain/firstlib-Adrien_ALLAIN")
+remotes::install_github("Adrien-Allain/firstlibAdrienALLAIN")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
+Voici un exemple pour illustrer comment utiliser le package dans R : 
 ``` r
 library(firstlibAdrienALLAIN)
-## basic example code
+
+summary_departement(data)
 ```
 
