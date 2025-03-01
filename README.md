@@ -5,9 +5,10 @@ output:
     code_folding: show
     highlight: espresso
 ---
-<p align="left">
-  <img src="https://github.com/Adrien-Allain/firstlib-Adrien_ALLAIN/blob/main/docs/logo.png" alt="Logo" width="100">
+<p style="display: flex; align-items: center; margin-left: 20px; margin-top: 20px;">
+  <img src="man/figures/logo.png" alt="Logo" width="100">
 </p>
+
 
 <!-- badges: start -->
 <!-- badges: end -->
