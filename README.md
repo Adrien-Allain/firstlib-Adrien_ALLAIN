@@ -6,10 +6,6 @@ output:
     highlight: 
 ---
 
-<p style="display: flex; align-items: center; margin-left: 20px; margin-top: 20px;">
-  <img src=logo.png" alt="Logo" width="100">
-</p>
-
 <!-- badges: start -->
 <!-- badges: end -->
 
