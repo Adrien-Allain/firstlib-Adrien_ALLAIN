@@ -3,8 +3,8 @@ title: "Rapport de la ville"
 format: "html"
 author: "Adrien ALLAIN"
 params: 
-  code_commune: null
-  code_departement: null
+  code_commune: ""
+  code_departement: ""
 ---
 
 ```{r echo = FALSE, eval = TRUE, include=FALSE}
@@ -22,7 +22,7 @@ data <- firstlibAdrienALLAIN::data
 #Nom de la ville pour titre
 
 nom_ville <- data |> 
-  filter(Code.de.la.commune == params$code_commune, Code.du.département == params$code_departement) |> 
+  filter(Code.de.la.commune == params$code_commune, Code.du.département == params$code_departement) |>
   pull(Libellé.de.la.commune) |> 
   unique()
 ```

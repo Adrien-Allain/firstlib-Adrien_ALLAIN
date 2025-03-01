@@ -4,14 +4,14 @@
 \alias{generer_rapport}
 \title{Générer un rapport Quarto pour une commune et un département}
 \usage{
-generer_rapport(commune, departement, output)
+generer_rapport(code_commune, code_departement, output)
 }
 \arguments{
+\item{output}{Chemin de sortie du fichier HTML généré, sous forme de chaîne de caractères.}
+
 \item{commune}{Un code de commune sous forme de chaîne de caractères (ex : "44109").}
 
 \item{departement}{Un code de département sous forme de chaîne de caractères (ex : "44").}
-
-\item{output}{Chemin de sortie du fichier HTML généré, sous forme de chaîne de caractères.}
 }
 \value{
 Aucun retour explicite. Un fichier html
