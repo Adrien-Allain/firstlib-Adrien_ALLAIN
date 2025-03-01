@@ -3,9 +3,6 @@ template:
   bootstrap: 5
   Theme: darkly
 
-assets:
-- "style.css"
-
 navbar:
   structure:
     left:  [intro, reference, articles, tutorials, news]
