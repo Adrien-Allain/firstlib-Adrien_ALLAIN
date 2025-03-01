@@ -5,7 +5,7 @@ output:
     code_folding: show
     highlight: espresso
 ---
-![Logo](docs/logo.png)
+![Logo](https://github.com/Adrien-Allain/firstlib-Adrien_ALLAIN/blob/main/docs/logo.png)
 
 <!-- badges: start -->
 <!-- badges: end -->
