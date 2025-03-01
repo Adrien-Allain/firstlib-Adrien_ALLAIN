@@ -8,7 +8,7 @@ Authors@R:
     role = c("aut", "cre"),
     comment = c(affiliation = "IAE Nantes"))
 Description: Ce package fournit des outils pour analyser les données sur des élus et communes ou départements. 
-  Il inclut des outils de visualisation et des statistiques descriptives.
+  Il inclut des outils de visualisation et des statistiques descriptives. Le package fournit une fonction permettant de générer un rapport pdf sur une commune et un département choisis.
   Ce package a été développé dans le cadre d'un projet pour un cours de programmation sous R à l'IAE Nantes.
 License: MIT + file LICENSE
 Encoding: UTF-8
