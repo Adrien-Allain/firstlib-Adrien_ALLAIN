@@ -46,15 +46,15 @@ summary_commune <- function(x){
   elu_plus_age <- trouver_l_elu_le_plus_age(x)
 
   #cat pour afficher dans la console.
-  cat("Nom de la commune",nom_commune, "\n")
-  cat("Nombre d'élu.e.s de la commune",nombre_elus,"\n")
-  cat("Ditribution des âges des élu.e.s", distribution_age,"\n")
+  cat("Nom de la commune:",nom_commune, "\n")
+  cat("Nombre d'élu.e.s de la commune:",nombre_elus,"\n")
+  cat("\nDitribution des âges des élu.e.s:", distribution_age,"\n")
 
   #Infos élu le plus âgé
-  cat("L'élu.e le/la plus agé.e")
-  cat("Nom :", elu_plus_age$Nom.de.l.élu, "\n")
-  cat("Prénom :", elu_plus_age$Prénom.de.l.élu, "\n")
-  cat("Âge :", elu_plus_age$Âge, "\n")
+  cat("\nL'élu.e le/la plus agé.e de la commune:\n")
+  cat("- Nom :", elu_plus_age$Nom.de.l.élu, "\n")
+  cat("- Prénom :", elu_plus_age$Prénom.de.l.élu, "\n")
+  cat("- Âge :", elu_plus_age$Âge, "\n")
 
 
 }

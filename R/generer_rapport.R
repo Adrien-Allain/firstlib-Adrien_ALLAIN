@@ -35,7 +35,7 @@ if (chemin_modele == "") {
 quarto::quarto_render(
   input = chemin_modele,
   output_file = output,
-  execute_params = list(commune = code_commune, departement = code_departement)
+  execute_params = list(code_commune = code_commune, code_departement = code_departement)
 )
 
 message("Rapport généré avec succès : ", output)

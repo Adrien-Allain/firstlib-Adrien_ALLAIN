@@ -52,9 +52,11 @@ plot_commune <- function(df){
     arrange(desc(n))
 
 
-  ggplot(code_csp)+
+  p <- ggplot(code_csp)+
     aes(x = reorder(Code.de.la.catégorie.socio.professionnelle, n), y = n)+
     geom_bar(stat = "identity", fill = "darkblue")+
     labs(title = paste(nom_commune, "-",nom_departement), x = paste("Libellés des codes professionnels pour les élus (", compter_nombre_d_elus(df), " élus)", sep = ""), y = "Nombre d'élus")+
     theme_classic()
+
+  return(p)
 }

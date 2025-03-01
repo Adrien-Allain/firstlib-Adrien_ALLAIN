@@ -54,10 +54,11 @@ plot_departement <- function(df){
     slice_max(n, n = 10 )
 
 
-  ggplot(code_csp)+
+  p <- ggplot(code_csp)+
     aes(x = reorder(Code.de.la.catégorie.socio.professionnelle, n), y = n)+
     geom_bar(stat = "identity", fill = "darkblue")+
     labs(title = paste(nom_departement, "-",nombre_commune, "communes"), x = paste("Libellés des 10 codes professionnels les plus représentés
 pour le département", nom_departement), y = "Nombre d'élus")+
     theme_classic()
+  return(p)
 }
