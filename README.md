@@ -6,7 +6,7 @@ output:
     highlight: espresso
 ---
 <p align="left">
-  <img src="https://github.com/Adrien-Allain/firstlib-Adrien_ALLAIN/blob/main/docs/logo.png" alt="Logo" width="100">
+  <img src="docs/logo.png" alt="Logo" width="100">
 </p>
 
 
