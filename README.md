@@ -5,7 +5,7 @@ output:
     code_folding: show
     highlight: 
 ---
-<<<<<<< HEAD
+
 <p style="display: flex; align-items: center; margin-left: 20px; margin-top: 20px;">
   <img src="man/figures/logo.png" alt="Logo" width="100">
 </p>
