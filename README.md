@@ -52,7 +52,7 @@ summary_departement(data)
 
 ## Obtenir de l'aide 
 
-Si vous rencontrez des difficultés à utiliser certaines fonctions ou si vous voulez signaler un bug, vous pouvez me contacter à cette email : adrienallain4@gmail.com
+Si vous rencontrez des difficultés à utiliser certaines fonctions ou si vous voulez signaler un bug, vous pouvez me contacter à cet email : adrienallain4@gmail.com
 
 ## Contribuer 
 
