@@ -31,7 +31,7 @@
 #'   Date.de.début.de.la.fonction = rep("", 4),
 #'   Code.nationalité = rep("", 4)
 #' )
-#' summary.departement(df_exemple)
+#' summary_departement(df_exemple)
 #'
 #' @export
 #'
